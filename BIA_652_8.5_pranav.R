@@ -1,0 +1,6 @@
+chemical_data <- read.csv(file.choose())
+summary(chemical_data)
+cor(chemical_data)
+library(corrplot)
+plot_chemical_data <- cor(chemical_data)
+corrplot(plot_chemical_data, method = "color", order = "hclust")
